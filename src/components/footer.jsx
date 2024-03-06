@@ -1,7 +1,7 @@
-export default function Header (){
+export default function Footer (){
     return(
         <footer>
-             Footer Legal
+             <p>Felipe Fracalossi</p>
         </footer>
     )
 }

@@ -1,12 +1,11 @@
-import default function header()
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
 export default function App() {
-
   return(
-    <div>
-        <header>
-        </header>
-   </div>  
+    <main>
+      <Header/>
+      <Footer/>
+    </main>
   );
-
 
 }
