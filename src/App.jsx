@@ -1,6 +1,7 @@
 import Footer from "./Components/footer"
 import Header from "./Components/Header"
 import Main from "./Components/Main"
+import Main from "./main";
 
 import "./globals.css"
 
