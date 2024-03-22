@@ -1,17 +1,17 @@
 import Footer from "./Components/footer"
-import Header from "./Components/Header"
+import Header from "./Components/header"
 import Main from "./Components/Main"
-import Main from "./main";
+
 
 import "./globals.css"
 
 export default function App() {
   return(
-    <div>
+    <main>
       <Header/>
       <Main/>
       <Footer/>
-    </div>
+    </main>
   );
 
 }

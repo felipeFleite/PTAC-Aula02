@@ -3,29 +3,40 @@ import { useState } from "react"
 export default function main(){
 
     const [nome ,setNome] = useState("")
-    const [telefone ,setTelefone] = useState("")
+    const [telefone ,setTelefone] = useState(0)
+    const [listaContatos, setListaContatos] = useState([])
+
+    const registrar = (event) => {
+        event.preventDefault()
+
+    }
 
     return(
-        <form>
+        <main>
+        <form action ="" onSubmit={registrar}>
+            <label htmlFor="nome">Nome:</label>
             <input
             type = "text"
-            nome = ""
-            id= ""
+            name = "nome-contato"
+            id= "nome"
+            value={nome}
             onChange={(event) => setNome(event.target.value)}
             />
 
-            {nome}
-
+            <label htmlFor="telefone">Telefone:</label>
             <input
             type = "tel"
-            nome = ""
-            id= ""
+            name = "telefone-contato"
+            id= "telefone"
+            value={telefone}
             onChange={(event) => setTelefone(event.target.value)}
             />
 
+            {nome}
             {telefone}  
 
-        <button id="botao"></button>
+        <button id="botao">Salvar</button>
         </form>
+        </main>
     )
 }
