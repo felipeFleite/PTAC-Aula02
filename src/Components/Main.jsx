@@ -8,7 +8,12 @@ export default function main(){
 
     const registrar = (event) => {
         event.preventDefault()
-
+        setListaContatos([...listaContatos,{
+            nomeSalvo: nome,
+            telefoneSalvo: telefone,
+            cpf: cpf
+        }
+    ])
     }
 
     return(
