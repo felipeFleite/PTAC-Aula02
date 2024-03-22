@@ -15,7 +15,7 @@ export default function main(){
         }
     ])
     }
-
+    console.table(listaContatos)
     return(
         <main>
         <form action ="" onSubmit={registrar}>
