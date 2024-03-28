@@ -4,6 +4,7 @@ export default function main(){
 
     const [nome ,setNome] = useState("")
     const [telefone ,setTelefone] = useState(0)
+    const [cpf ,setCpf] = useState(0)
     const [listaContatos, setListaContatos] = useState([])
 
     const registrar = (event) => {
@@ -35,6 +36,15 @@ export default function main(){
             id= "telefone"
             value={telefone}
             onChange={(event) => setTelefone(event.target.value)}
+            />
+
+            <label htmlFor="cpf">Cpf:</label>
+            <input
+            type = "cpf"
+            name = "cpf-contato"
+            id= "cpf"
+            value={cpf}
+            onChange={(event) => setCpf(event.target.value)}
             />
 
             {nome}
