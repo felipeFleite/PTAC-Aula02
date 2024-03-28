@@ -12,7 +12,7 @@ export default function main(){
         setListaContatos([...listaContatos,{
             nomeSalvo: nome,
             telefoneSalvo: telefone,
-            cpf: cpf
+            cpfSalvo: cpf
         }
     ])
     }
@@ -48,7 +48,8 @@ export default function main(){
             />
 
             {nome}
-            {telefone}  
+            {telefone}
+            {cpf}  
 
         <button id="botao">Salvar</button>
         </form>
