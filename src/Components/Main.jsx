@@ -9,6 +9,7 @@ export default function main(){
 
     const registrar = (event) => {
         event.preventDefault()
+        alert("CERTO!!!")
         setListaContatos([...listaContatos,{
             nomeSalvo: nome,
             telefoneSalvo: telefone,
@@ -46,13 +47,16 @@ export default function main(){
             value={cpf}
             onChange={(event) => setCpf(event.target.value)}
             />
-
-            {nome}
-            {telefone}
-            {cpf}  
+ 
 
         <button id="botao">Salvar</button>
         </form>
+        {listaContatos.map((contato,index)=> <div key={index}>
+            <p>{contato.nomeSalvo}</p>
+            <p>{contato.telefoneSalvo}</p>
+            <p>{contato.cpfSalvo}</p>
+        </div> ) }
+       
         </main>
     )
 }
