@@ -9,7 +9,6 @@ export default function main(){
 
     const registrar = (event) => {
         event.preventDefault()
-        alert("CERTO!!!")
         setListaContatos([...listaContatos,{
             nomeSalvo: nome,
             telefoneSalvo: telefone,
@@ -18,6 +17,20 @@ export default function main(){
     ])
     }
     console.table(listaContatos)
+
+    const remover = (id) =>{
+        const novaLista = listaContatos.filter(
+            (contato,index)=> {
+                if(index !== id){
+                    return contato
+                }else{
+                    return null
+                }
+            }
+        )
+        setListaContatos(novaLista)
+    }
+
     return(
         <main>
         <form action ="" onSubmit={registrar}>
@@ -55,6 +68,7 @@ export default function main(){
             <p>{contato.nomeSalvo}</p>
             <p>{contato.telefoneSalvo}</p>
             <p>{contato.cpfSalvo}</p>
+            <button onClick={()=> remover(index)}>X</button>
         </div> ) }
        
         </main>
